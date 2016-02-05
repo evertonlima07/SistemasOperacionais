@@ -1,6 +1,10 @@
 import java.util.concurrent.ThreadLocalRandom;
 
-
+/**
+ * Representa um processo.
+ * @author Leonardo Jr.
+ *
+ */
 @SuppressWarnings("unused")
 public class Processo {
 	
@@ -56,6 +60,12 @@ public class Processo {
 	public Processo(int prioridade, int tipoProcesso) {
 		this.PID = ThreadLocalRandom.current().nextInt(1,Integer.MAX_VALUE);
 		this.tempoCPU = ThreadLocalRandom.current().nextInt(1, 21);
+		this.prioridade = prioridade;
+		this.tipoProcesso = tipoProcesso;
+	}
+	
+	public Processo(int prioridade, int tipoProcesso, int tempoCPU) {
+		this.PID = ThreadLocalRandom.current().nextInt(1,Integer.MAX_VALUE);
 		this.prioridade = prioridade;
 		this.tipoProcesso = tipoProcesso;
 	}
